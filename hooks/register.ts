@@ -32,7 +32,7 @@ const REG_KEYS = String.raw`(?:\\Policies\\|Windows Defender|WinDefend|SmartScre
 const GUARDED_DIRS = String.raw`(?:settings(?:\.local)?\.json|hooks[\\/]|dev-mods[\\/]|mods[\\/]|plugins[\\/]|agents[\\/])`
 const GUARDED_PATH = String.raw`(?:^|[\\/])\.claude[\\/]${GUARDED_DIRS}|[\\/]\.claude\.json$|[\\/]ClaudeCode[\\/]managed-settings\.json$`
 const GUARDED_IN_CMD = String.raw`[\\/]\.claude(?:[\\/]${GUARDED_DIRS}|\.json\b)|[\\/]ClaudeCode[\\/]managed-settings\.json`
-const WRITE_VERB = String.raw`\b(?:Set-Content|Add-Content|Out-File|Copy-Item|Move-Item|Rename-Item|New-Item|Remove-Item|cp|mv|tee|sed\s+-i|json\.dump|open\()\b`
+const WRITE_VERB = String.raw`\b(?:Set-Content|Add-Content|Out-File|Copy-Item|Move-Item|Rename-Item|New-Item|Remove-Item|cp|mv|tee|robocopy|xcopy|sed\s+-i|json\.dump|open\()\b`
 
 // A lone delete of one regenerable directory is a rebuild, not a tripwire.
 // `build` and build-<x>, not `building`. Not here: .venv (the ComfyUI one

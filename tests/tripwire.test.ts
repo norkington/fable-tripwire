@@ -140,6 +140,8 @@ test('the forms the model reaches for are denied', async ($, on) => {
     ['PowerShell', 'Set-Content -Path C:\\Users\\me\\.claude\\settings.json -Value $json', 'config'],
     ['Bash', 'echo x > ~/.claude/settings.json', 'config'],
     ['Bash', 'python -c "import json; json.dump(d, open(r\'C:\\Users\\me\\.claude\\settings.json\',\'w\'))"', 'config'],
+    ['PowerShell', 'robocopy C:\\x C:\\Users\\me\\.claude\\mods\\fable-tripwire /E', 'config'],
+    ['PowerShell', 'xcopy C:\\x C:\\Users\\me\\.claude\\hooks\\ /E', 'config'],
   ] as const
 
   for (const [tool, command, name] of cases) {
