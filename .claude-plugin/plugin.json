@@ -1,0 +1,6 @@
+{
+  "name": "fable-tripwire",
+  "version": "0.1.0",
+  "description": "Blocks hard-to-undo commands until a person clears them once with /tripwire allow",
+  "types": "./types/index.d.ts"
+}

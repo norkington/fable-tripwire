@@ -1,0 +1,5 @@
+{
+  "name": "fable-tripwire",
+  "owner": { "name": "norkington" },
+  "plugins": [{ "name": "fable-tripwire", "source": "./" }]
+}
